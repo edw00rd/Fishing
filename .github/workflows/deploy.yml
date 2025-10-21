@@ -2,7 +2,7 @@ name: Deploy Salmon Map to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # or 'master' if that’s your default
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -37,13 +37,14 @@ jobs:
             npm install
           fi
 
-      - name: Build project
+      - name: Build React project
         working-directory: salmon-map
         run: npm run build
 
-      - name: Upload build output
+      - name: Upload built files for Pages
         uses: actions/upload-pages-artifact@v3
         with:
+          # 👇 this tells GitHub to deploy the salmon-map build output
           path: salmon-map/build
 
   deploy:
