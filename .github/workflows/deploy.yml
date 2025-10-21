@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: salmon-map
-        run: npm ci
+        run: npm install
 
       - name: Build project
         working-directory: salmon-map
