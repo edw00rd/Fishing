@@ -1,1 +1,1 @@
-# Salmon Map React App
+# Salmon Map React Web App
